@@ -1,0 +1,8 @@
+from fastapi import FastAPI
+from datetime import datetime
+
+app = FastAPI()
+
+@app.get("/ping")
+def ping():
+    return {"ok": True, "time": datetime.now().isoformat()}
